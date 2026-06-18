@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import { Printer, MapPin, AlertTriangle, ChevronRight, Clock } from 'lucide-react';
+import obrazecPdfUrl from '../assets/obrazec.pdf';
 
 export default function App() {
   const targetDate = new Date('2026-06-22T23:59:59');
@@ -240,7 +241,7 @@ export default function App() {
               <div className="inline-block relative shrink-0">
                 <div className="absolute inset-0 border-2 border-white bg-white translate-x-1 translate-y-1 md:translate-x-2 md:translate-y-2"></div>
                 <a
-                  href="/assets/obrazec.pdf"
+                  href={obrazecPdfUrl}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="relative flex items-center gap-3 bg-[#A52BA7] text-white px-6 py-4 border-2 border-white font-black text-xl md:text-2xl uppercase hover:bg-white hover:text-[#A52BA7] hover:border-black transition-colors duration-200 active:translate-x-1 active:translate-y-1 active:shadow-none z-10 w-full md:w-auto justify-center"
