@@ -1,6 +1,5 @@
 import { useState, useEffect } from 'react';
 import { Printer, MapPin, AlertTriangle, ChevronRight, Clock } from 'lucide-react';
-import obrazecPdfUrl from '../assets/obrazec.pdf';
 
 export default function App() {
   const targetDate = new Date('2026-06-22T23:59:59');
@@ -151,6 +150,20 @@ export default function App() {
       ]
     },
     {
+      city: "Celje",
+      spots: [
+        {
+          name: "Društvo Besa Celje",
+          address: "Mariborska cesta 68/a, 3000 Celje",
+          query: "Mariborska cesta 68/a Celje",
+          times: [
+            "Petek 19. 6. od 9.00 do 21.00",
+            "Sobota 20. 6. od 9.00 do 21.00"
+          ]
+        }
+      ]
+    },
+    {
       city: "Velenje",
       spots: [
         {
@@ -241,7 +254,7 @@ export default function App() {
               <div className="inline-block relative shrink-0">
                 <div className="absolute inset-0 border-2 border-white bg-white translate-x-1 translate-y-1 md:translate-x-2 md:translate-y-2"></div>
                 <a
-                  href={obrazecPdfUrl}
+                  href="/assets/obrazec.pdf"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="relative flex items-center gap-3 bg-[#A52BA7] text-white px-6 py-4 border-2 border-white font-black text-xl md:text-2xl uppercase hover:bg-white hover:text-[#A52BA7] hover:border-black transition-colors duration-200 active:translate-x-1 active:translate-y-1 active:shadow-none z-10 w-full md:w-auto justify-center"
@@ -318,13 +331,109 @@ export default function App() {
 
       </main>
 
-      {/* 6. FOOTER */}
-      <footer className="max-w-4xl mx-auto border-t-4 border-black pt-8 pb-12 mt-12 text-center md:text-left text-lg font-medium opacity-80">
-        <p className="mb-2"><strong>Iniciativa:</strong></p>
-        <p className="text-base leading-relaxed text-black">
-          Kulturno društvo Gmajna, Kulturni center Danilo Kiš in Albansko kulturno društvo – AKD LIRI ter prvopodpisana Svetlana Slapšak.
-        </p>
-      </footer>
+      {/* 7. PODPISNIKI & VIRI */}
+      <div className="max-w-4xl mx-auto space-y-12 mt-4 mb-16">
+
+        {/* Izjava */}
+        <section className="bg-white border-4 border-black border-b-[8px] border-r-[8px] p-6 md:p-10 shadow-[8px_8px_0px_#A52BA7]">
+          <h2 className="text-2xl md:text-4xl font-black uppercase tracking-tight mb-8 leading-tight">Odvzem volilne pravice soobčankam in soobčanom</h2>
+
+          <div className="space-y-5 text-base md:text-lg leading-relaxed text-black/85">
+            <p>V sredo, 10. junija 2026, so poslanci in poslanke na 5. nujni seji Odbora za notranje zadeve potrdili spremembe Zakona o lokalnih volitvah, ki med drugim odvzema volilno pravico državljanom tretjih držav, ki imajo dovoljenje za stalno prebivanje v Republiki Sloveniji. Te osebe tukaj živijo že vrsto let, delajo, plačujejo davke, vzgajajo otroke, soustvarjajo lokalne skupnosti in predstavljajo njihov nepogrešljiv del.</p>
+
+            <p>Sprememba je sporna, saj omejuje politične pravice skupine prebivalcev, ki so jih pridobili pred več kot dvemi desetletji. Obravnavana je bila po skrajšanem zakonodajnem postopku in na začetku mandata, s čimer je onemogočena širša javna in strokovna razprava, ki bi jo takšen poseg v demokratične standarde nedvomno zahteval. Gre za spodkopavanje politične participacije v širšem smislu, saj se volilna zakonodaja spreminja tik pred jesenskimi lokalnimi volitvami.</p>
+
+            <p className="bg-[#CCCF5D] px-5 py-4 font-semibold border-l-4 border-[#A52BA7]">Odvzem volilne pravice bo utišal približno <strong>100.000 glasov</strong>. Volilno pravico spreminja v politično orodje – morda v hiter obliž, s katerim naj bi se "pomirila" javnost v času vse večje globalne negotovosti in draginje. Tujci so ponovno postali izgovor za preusmerjanje pozornosti od številnih težav lokalne uprave. Pri tem se sprašujemo, ali niso predlagatelji odvzeli volilne pravice tudi tistim upravičencem, ki so zanje glasovali na preteklih lokalnih volitvah.</p>
+
+            <p>Volilna pravica je eden temeljnih institutov demokracije, ki temelji na načelu, da imajo ljudje, ki živijo v določeni skupnosti, možnost sodelovati pri odločanju o vprašanjih, ki vplivajo na njihovo vsakdanje življenje. Volilna pravica ni privilegij, temveč mehanizem vključevanja in politične participacije ljudi, ki so trajno povezani z okoljem, v katerem živijo. Ne gre zgolj za tehnično vprašanje, temveč za občutek pripadnosti in družbeno kohezijo. Paradoksalno je od priseljenk in priseljencev pričakovati, da se bodo vključili v novo okolje, hkrati pa jim odvzeti možnost soodločanja o skupnosti, katere del naj bi postali.</p>
+
+            <p>Državljani tretjih držav s stalnim prebivališčem imajo po trenutno veljavni zakonodaji volilno pravico na občinski oziroma lokalni ravni, ne pa tudi na državni. To pomeni, da lahko v občini, kjer imajo stalno prebivališče, volijo župana in člane občinskega sveta, nimajo pa pravice sodelovati na volitvah v Državni zbor ali na volitvah predsednika republike. Na lokalni ravni jim je zagotovljena aktivna volilna pravica, to je pravica glasovati, pasivne volilne pravice, torej pravice kandidirati in biti izvoljeni, pa nimajo. Ta je na lokalni ravni priznana državljanom Republike Slovenije in državljanom drugih držav članic EU.</p>
+
+            <p>Volilna pravica na lokalnih volitvah za državljane tretjih držav ni izjema. Različne oblike takšne pravice priznava večina držav članic Evropske unije. Na Švedskem, Danskem, Portugalskem in v Litvi jo lahko tujci uveljavljajo po treh letih zakonitega prebivanja, na Finskem po štirih letih, v Belgiji, na Nizozemskem in na Madžarskem pa po petih letih. Ne gre za obrobno posebnost, temveč za uveljavljeno prakso.</p>
+
+            <p>V Luksemburgu, kjer je udeležba na volitvah obvezna, časovnih pogojev ni – tujci ob predhodni registraciji pridobijo volilno pravico z vpisom v volilni imenik. Podobno ureditev poznajo na Irskem, kjer imajo pravico glasovati na lokalnih volitvah vsi prebivalci, ne glede na državljanstvo. Za udeležbo na volitvah ni potrebno niti stalno prebivališče niti večletno bivanje v državi, temveč zadoščajo prebivanje v lokalni skupnosti, starost najmanj 18 let in vpis v volilni imenik.</p>
+
+            <p>Slovenska ureditev je tako v primerjavi z drugimi evropskimi državami že doslej precej restriktivna, a hkrati velja za primer dobre prakse na področju politik integracije.</p>
+
+            <p>V obdobju zaključevanja pristopnih pogajanj za vstop v Evropsko unijo je Slovenija kot mlada država želela dokazati, da je demokratična, solidarna in zavezana evropskim vrednotam. Maja 2002 je vlada Janeza Drnovška v okviru širših demokratičnih reform razširila lokalno volilno pravico tudi na tujce s stalnim prebivališčem. Istega leta sta podobne rešitve uvedli tudi Estonija in Litva. Predlagatelji razširitve so jo takrat predstavljali kot civilizacijsko normo in kot del približevanja evropskim političnim standardom.</p>
+
+            <p className="font-semibold italic">Kakšni pa so ti standardi danes, ko vlada ad hoc odvzema volilno pravico manjšinskemu delu prebivalstva?</p>
+
+            <p>Države, ki državljanom tretjih držav (še) ne priznavajo volilne pravice ali jo omejujejo, razvijajo druge mehanizme političnega vključevanja. V Avstriji, Nemčiji, Italiji in Grčiji, kjer tujci nimajo volilne pravice, delujejo migrantski sveti, integracijske komisije in druga posvetovalna telesa, ki omogočajo institucionalizirano zastopanje migrantskih skupnosti ter dialog z lokalnimi oblastmi.</p>
+
+            <p>Takšni mehanizmi sicer ne nadomeščajo volilne pravice, vendar predstavljajo pomemben kanal za sodelovanje migrantov pri oblikovanju lokalnih politik in odločitev, ki vplivajo na njihovo vsakdanje življenje. Posvetovalna telesa poznajo tudi v Luksemburgu, Belgiji, Španiji in na Nizozemskem, čeprav te države pod določenimi pogoji tujcem omogočajo tudi uresničevanje volilne pravice na lokalni ravni.</p>
+
+            <p>Nemčija, ki državljanom tretjih držav ne priznava volilne pravice, hkrati pa beleži visok delež prebivalcev migrantskega porekla, je junija 2024 poenostavila dostop do nemškega državljanstva. Namesto krčenja političnih pravic je izbrala vključujoč pristop: olajšala je pridobitev državljanstva in s tem dostop do polne politične participacije, vključno s splošno volilno pravico.</p>
+
+            <p className="font-bold">Spremembam Zakona o lokalnih volitvah, ki državljanom tretjih držav odvzemajo volilno pravico na lokalni ravni, ostro nasprotujemo. Zahtevamo, da se predlagane spremembe presodijo z vidika njihove skladnosti z Ustavo Republike Slovenije.</p>
+
+            <p>Vlado pozivamo, naj prepozna razvojne priložnosti za krepitev vključevanja in politične participacije vseh prebivalcev Republike Slovenije. Obenem opozarjamo, da je treba poleg volilne pravice okrepiti tudi druge oblike vključevanja tujcev v demokratične procese. Med drugim je treba poenostaviti postopke za pridobitev državljanstva ter na občinski ravni vzpostaviti svete za vključevanje priseljencev.</p>
+
+            <p>Politične pravice imajo tudi ljudje, ki v skupnosti trajno živijo, čeprav niso njeni državljani. Sodobne demokracije ne temeljijo zgolj na načelu večine, temveč tudi na varstvu manjšin, človekovih pravicah, ustavnih omejitvah oblasti in vključevanju skupin, ki nimajo politične moči. V demokratičnih ureditvah vprašanje ni le, kdo zmaga na volitvah, temveč tudi, kdo je v politično skupnost sploh vključen. Gre za temeljno vprašanje, ali Republika Slovenija tujce s stalnim prebivališčem razume kot enakovreden del lokalnih skupnosti, v katerih živijo.</p>
+
+            <blockquote className="border-l-8 border-[#A52BA7] pl-6 py-3 text-lg md:text-xl font-medium italic text-black mt-6">
+              Vprašanje zato ni le, komu je bil danes odvzet glas. Ključno vprašanje je, kakšno demokracijo želimo graditi: takšno, ki ljudi vključuje in spodbuja njihovo sodelovanje pri javnih zadevah, ali takšno, ki delu prebivalstva odreka politični glas, čeprav je del skupnosti, v njej živi, dela in prispeva k njenemu razvoju.
+            </blockquote>
+          </div>
+        </section>
+
+        {/* Podpisniki */}
+        <section>
+          <h2 className="text-2xl md:text-3xl font-black uppercase tracking-tight mb-6 border-b-4 border-black pb-3">Podpisniki</h2>
+          <ul className="columns-1 md:columns-2 gap-8 text-base md:text-lg font-medium space-y-1">
+            {[
+              "Kulturno društvo Gmajna",
+              "Kulturni center Danilo Kiš",
+              "Slovenska filantropija",
+              "PIC - Pravni center za varstvo človekovih pravic in okolja",
+              "Infokolpa",
+              "Inštitut Časopis za kritiko znanosti",
+              "Inštitut za multikulturne raziskave - IMR",
+              "Albansko kulturno društvo - AKD LIRIA",
+              "Bošnjaška kulturna zveza Slovenije",
+              "Bošnjaško mladinsko kulturno društvo Velenje",
+              "Zveza albanskih kulturnih društev v Sloveniji",
+              "Zveza zvez kulturnih društev narodnih skupnosti konstitutivnih narodov nekdanje SFRJ v Republiki Sloveniji",
+              "Kulturno društvo albancev Migjeni - KDA Migjeni",
+              "Kulturno društvo albancev Besa Celje",
+              "Društvo albanskih žensk Teuta",
+              "Društvo Ymer Elshani Slovenija",
+              "Kulturno društvo Albancev Slovenske Istre Iliria-Koper",
+              "Kulturno in športno društvo »Sandžak« v Sloveniji",
+              "Kulturno izobraževalno društvo Bashkimi Maribor",
+              "Društvo za kulturno kontaminacijo AnKlaB",
+              "Društvo Ljiljan",
+              "Kulturno umetniško in športno društvo Behar",
+              "Bošnjačko kulturno društvo RUH Domžale",
+              "Sangai d.o.o. - Sangai - Skupaj",
+              "Zavod Afriška Vas",
+            ].map((org) => (
+              <li key={org} className="flex items-start gap-2 break-inside-avoid">
+                <span className="text-[#A52BA7] font-black mt-0.5">—</span>
+                {org}
+              </li>
+            ))}
+          </ul>
+        </section>
+
+        {/* Viri */}
+        <section>
+          <h2 className="text-2xl md:text-3xl font-black uppercase tracking-tight mb-6 border-b-4 border-black pb-3">Viri</h2>
+          <ol className="space-y-4 text-sm md:text-base font-medium text-black/70 list-decimal list-outside ml-5">
+            <li>An Coimisiún Toghcháin - The Electoral Commission of Ireland (2026). <em>Voter Eligibility.</em> Dostopno na: <a href="https://www.electoralcommission.ie/voter-eligibility/" target="_blank" rel="noopener noreferrer" className="underline hover:text-[#A52BA7] break-all">https://www.electoralcommission.ie/voter-eligibility/</a> (Pridobljeno 11. 6. 2026).</li>
+            <li>EMVI - Empowering Migrant Voices on Integration and Inclusion Policies (2022). <em>National Reports.</em> Dostopno na: <a href="https://diaspora-participation.eu/wp-content/uploads/2022/10/DEF_EMVI_AT_DE_IT_GR_SI_NationalReports.pdf" target="_blank" rel="noopener noreferrer" className="underline hover:text-[#A52BA7] break-all">https://diaspora-participation.eu/…</a> (Pridobljeno 10. 6. 2026).</li>
+            <li>EMVI – Krepitev migrantskih glasov v politikah vključevanja (2022). <em>Povzetek vodnika dobre prakse.</em> Dostopno na: <a href="https://www.mirovni-institut.si/wp-content/uploads/2022/02/Povzetek-vodnika-dobre-prakse-za-politicno-participacijo-migrantov-slovenscina.pdf" target="_blank" rel="noopener noreferrer" className="underline hover:text-[#A52BA7] break-all">https://www.mirovni-institut.si/…</a> (Pridobljeno 10. 6. 2026).</li>
+            <li>EMVI-LII - Empowering Migrant Voices for Local Integration and Inclusion (2025). <em>Baseline Assessment of Local Integration Strategies And Migrant Participation.</em> Dostopno na: <a href="https://www.mirovni-institut.si/wp-content/uploads/2025/03/BaselineAssessment_EMV-LII.pdf" target="_blank" rel="noopener noreferrer" className="underline hover:text-[#A52BA7] break-all">https://www.mirovni-institut.si/…</a> (Pridobljeno 10. 6. 2026).</li>
+            <li>Groenendijk, Kees (2014). <em>Voting Rights for Nationals of Non-EU States.</em> Bonn: Bundeszentrale für politische Bildung. Dostopno na: <a href="https://www.bpb.de/themen/migration-integration/kurzdossiers/184711/voting-rights-for-nationals-of-non-eu-states/" target="_blank" rel="noopener noreferrer" className="underline hover:text-[#A52BA7] break-all">https://www.bpb.de/…</a> (Pridobljeno 10. 6. 2026).</li>
+            <li>Luxembourg Government, Ministry of Family Affairs, Solidarity, Living Together and Reception of Refugees (2026). <em>Living Together.</em> Dostopno na: <a href="https://mfsva.gouvernement.lu/en/le-ministere/attributions/zesummeliewen.html" target="_blank" rel="noopener noreferrer" className="underline hover:text-[#A52BA7] break-all">https://mfsva.gouvernement.lu/…</a> (Pridobljeno 11. 6. 2026).</li>
+            <li>Medved, Felicita (2002). Volilna pravica tujcev s stalnim prebivališčem kot prispevek integraciji in lokalni samoupravi. <em>Razprave in gradivo - Inštitut za narodnostna vprašanja (1990),</em> številka 40, str. 22–39.</li>
+            <li>MIPEX - Migrant Integration Policy Index (2025). Dostopno na: <a href="https://mipex.eu/" target="_blank" rel="noopener noreferrer" className="underline hover:text-[#A52BA7]">https://mipex.eu/</a> (Pridobljeno 10. 6. 2026).</li>
+            <li>Rozumek, Martin (2015). <em>Participation and Policy Involvement of Third Country Nationals in Public Life of 9 Central and Eastern EU Member States.</em> Organizace pro pomoc uprchlíkům.</li>
+          </ol>
+        </section>
+
+      </div>
+
     </div>
   );
 }
