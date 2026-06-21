@@ -65,7 +65,7 @@ export default function App() {
             "Petek 19. 6. od 9.00 do 00.00",
             "Sobota 20. 6. od 9.00 do 00.00",
             "Nedelja 21. 6. od 9.00 do 00.00",
-            "Nedelja 22. 6. od 9.00 do 12.00"
+            "Ponedeljek 22. 6. od 9.00 do 12.00"
           ]
         },
         {
