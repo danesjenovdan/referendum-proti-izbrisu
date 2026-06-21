@@ -64,7 +64,8 @@ export default function App() {
             "Četrtek 18. 6. od 9.00 do 00.00",
             "Petek 19. 6. od 9.00 do 00.00",
             "Sobota 20. 6. od 9.00 do 00.00",
-            "Nedelja 21. 6. od 9.00 do 00.00"
+            "Nedelja 21. 6. od 9.00 do 00.00",
+            "Nedelja 22. 6. od 9.00 do 12.00"
           ]
         },
         {
@@ -175,17 +176,6 @@ export default function App() {
             "Sobota 20. 6. 2026. od 9:00 do 14.00"
           ]
         },
-        {
-          name: "Okrepčevalnica Mladost",
-          address: "Prešernova cesta 10a, 3320 Velenje",
-          query: "Okrepčevalnica Mladost Prešernova cesta 10a Velenje",
-          times: [
-            "Četrtek 18. 6. od 8.00 do 00.00",
-            "Petek 19. 6. od 8.00 do 00.00",
-            "Sobota 20. 6. od 8.00 do 00.00",
-            "Nedelja 21. 6. od 8.00 do 00.00"
-          ]
-        }
       ]
     }
   ];
